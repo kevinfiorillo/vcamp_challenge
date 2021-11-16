@@ -11,6 +11,7 @@ class Ejercicio3Test {
         assertEquals("02.02.2021", Ejercicio3.viajarEnElTiempo(2021,33));
         assertEquals("01.03.2021", Ejercicio3.viajarEnElTiempo(2021,60));
         assertEquals("02.03.2021", Ejercicio3.viajarEnElTiempo(2021,61));
+        assertEquals("08.11.2021", Ejercicio3.viajarEnElTiempo(2021,312));
 
     }
 
@@ -39,6 +40,19 @@ class Ejercicio3Test {
         assertEquals("08.11.1800", Ejercicio3.viajarEnElTiempo(1800,313));
 
     }
+
+    @Test
+    public void deberiaDevolverLaFechaExactaDelDiaDelProgramadorDeAnioNormalYBisiesto(){
+        assertEquals("13.09.2021", Ejercicio3.viajarEnElTiempo(2021,256));
+        assertEquals("12.09.2020", Ejercicio3.viajarEnElTiempo(2020,256));
+    }
+
+    @Test
+    public void deberiaDevolverLaFechaExactaDelUltimoDiaDelAnio(){
+        assertEquals("31.12.2021", Ejercicio3.viajarEnElTiempo(2021,365));
+        assertEquals("31.12.2020", Ejercicio3.viajarEnElTiempo(2020,366));
+    }
+
 
 
 }
